@@ -2,19 +2,158 @@ body {
   background: black;
   color: white;
   margin: 0;
+  box-sizing: border-box;
+  background-image: url('http://images.freeimages.com/images/previews/6d3/curtains-1165305.jpg');
+  background-size: cover;
+}
+
+
+.wordmark {
+  font-family: 'Satisfy', cursive;
+  color: #00f0ff;
+  font-size: 36px;
+  display: inline-block;
+  padding: 0 50px;
+  cursor: pointer;
+}
+
+.wordmark span {
+  color: #a1f694;
+  font-size: 44px;
 }
 
 .navbar {
   background: #241c32;
-  margin: 0;
+  margin: 0 0 3em 0;
+  width: 100%;
+  display: inline-block;
+  height: 110px;
 }
 
-.navbar ul {
+.navButtons {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  float: right;
+  margin: 36px 30px;
 }
 
-.navbar ul li {
+.navButtons li {
   display: inline;
+  padding: 8px 20px;
+  cursor: pointer;
+  float: right;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+.navButtons li:hover {
+  color: white;
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 0 10px white , 0 0 20px white , 0 0 30px white , 0 0 40px #00f0ff , 0 0 70px #00f0ff , 0 0 80px #00f0ff , 0 0 100px #00f0ff ;
+}
+
+.formWrap {
+  margin: 250px;
+}
+
+.inputBox {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 300px;
+  line-height: 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.inputButton {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  background: #241c32;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+}
+
+.inputButton:hover {
+  color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 0 10px white , 0 0 20px white , 0 0 30px white , 0 0 40px #00f0ff , 0 0 70px #00f0ff , 0 0 80px #00f0ff , 0 0 100px #00f0ff ;
+}
+
+.welcomeWrap {
+  margin: 100px auto;
+  line-height: 36px;
+  max-width: 500px;
+  height: 400px;
+  background:  #241c32;
+  border-radius: 100%;
+  text-align: center;
+  padding: 120px 50px 50px;
+  vertical-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+
+.mainLogo {
+  font-family: 'Satisfy', cursive;
+  color: #00f0ff;
+  font-size: 72px;
+  display: inline-block;
+  line-height: 50px;
+  margin: -10px;
+}
+
+.mainLogo span {
+  color: #a1f694;
+  font-size: 88px;
+}
+
+.welcomeText {
+  font-size: 30px;
+}
+
+.prodContainer {
+    margin: 100px auto;
+    max-width: 80%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.prodBox {
+  margin: 0 auto;
+  font-size: 1.2em;
+  display: inline-block;
+  background:  #241c32;
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 200px;
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.prodBox p {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+.prodBox:hover {
+  color: white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 0 10px white , 0 0 20px white , 0 0 30px white , 0 0 40px #00f0ff , 0 0 70px #00f0ff , 0 0 80px #00f0ff , 0 0 100px #00f0ff ;
 }

@@ -1,0 +1,11 @@
+<div class="prodContainer" ng-if="!formInput">
+  <div class="prodBox" ng-repeat="prod in prods">
+    <p ui-sref="prod({prodId:prod.$id})">{{prod.name}}</p>
+  </div>
+  <div class="prodBox" ng-click="toggleInput()">(New)</div>
+</div>
+
+<form ng-if="formInput" ng-submit="createNewProd(newProd)">
+  <input class="inputBox" type="text" placeholder="Production Name" ng-model="newProd.name">
+  <button type="submit">Save</button>
+</form>

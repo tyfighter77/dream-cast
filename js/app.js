@@ -1,32 +1,32 @@
-angular.module('dreamCastApp', ['ui-router', 'firebase'])
-.constat('fb', {
+angular.module('dreamCastApp', ['ui.router', 'firebase'])
+.constant('fb', {
   url: 'https://dream-cast.firebaseio.com/'
 })
 .config(function($stateProvider, $urlRouterProvider){
   $stateProvider
-    .state('Home',{
+    .state('home',{
       url: '/home',
-      templateUrl: '/views/homeTmpl.html',
+      templateUrl: './views/homeTmpl.html',
       controller: 'homeCtrl'
     })
-    .state('Login', {
+    .state('login', {
       url: '/login',
-      templateUrl: '/views/loginTmpl.html',
+      templateUrl: './views/loginTmpl.html',
       controller: 'loginCtrl'
     })
-    .state('Register', {
+    .state('register', {
       url: '/register',
-      templateUrl: '/views/regTmpl.html',
+      templateUrl: './views/regTmpl.html',
       controller: 'regCtrl'
     })
-    .state('Productions', {
+    .state('productions', {
       url: '/productions',
-      templateUrl: '/views/prodsTmpl.html',
+      templateUrl: './views/prodsTmpl.html',
       controller: 'prodsCtrl'
     })
-    .state('Production', {
+    .state('production', {
       url: '/productions/:prodId',
-      templateUrl: '/views/prodTmpl.html',
+      templateUrl: './views/prodTmpl.html',
       controller: 'prodCtrl'
     });
   $urlRouterProvider.otherwise('/home');

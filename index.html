@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-<html ng-model="dreamCastApp">
+<html ng-app="dreamCastApp">
 
 <head>
   <meta charset="utf-8">
   <title>Dream Cast</title>
+  <!-- <link rel="stylesheet" href="normalize.css"> -->
   <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-<div class="navbar">
-  <h1 class="wordmark">Dream Cast</h1>
-  <ul>
-    <li>Home</li>
-    <li>Productions</li>
-    <li>Login</li>
-    <li>Register</li>
-  </ul>
-</div>
 
-
+<navbar-dir></navbar-dir>
 <div class="container" ui-view></div>
 
 
@@ -34,6 +28,7 @@
   <script src="js/prodCtrl.js"></script>
   <script src="js/userService.js"></script>
   <script src="js/prodService.js"></script>
+  <script src="directives/navbarDir.js"></script>
 
 </body>
 
