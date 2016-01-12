@@ -5,6 +5,7 @@ body {
   box-sizing: border-box;
   background-image: url('http://images.freeimages.com/images/previews/6d3/curtains-1165305.jpg');
   background-size: cover;
+  overflow: hidden;
 }
 
 
@@ -187,8 +188,8 @@ body {
 
 .trashWrap {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 40px;
+  bottom: 40px;
   color: white;
   background: #241c32;
   width: 100px;

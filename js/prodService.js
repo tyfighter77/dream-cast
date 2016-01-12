@@ -26,4 +26,14 @@ angular.module('dreamCastApp')
     return $firebaseArray(ref);
   };
 
+  this.deleteProd = function(prodId) {
+    var ref = new Firebase(fb.url + 'prods/' + prodId);
+    return ref.remove();
+  };
+
+  this.deleteActor = function(prodId, actorId) {
+    var ref = new Firebase(fb.url + 'prods/' + prodId + '/actors/' + actorId);
+    return ref.remove();
+  };
+
 });

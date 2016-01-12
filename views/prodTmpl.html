@@ -1,7 +1,7 @@
 <h1 class="pageTitle">{{prod.name}}</h1>
 
 <div class="prodContainer" ng-if="!formInput">
-  <div class="prodBox" ng-repeat="actor in actors">
+  <div class="prodBox" ng-repeat="actor in actors" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="actor.$id" jqyoui-draggable="{animate:true}">
     <p> <span class="castText">{{actor.role}}</span><br/>{{actor.name}}</p>
   </div>
   <div class="prodBox" ng-click="toggleInput()">(New Role)</div>

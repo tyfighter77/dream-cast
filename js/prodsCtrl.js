@@ -13,8 +13,10 @@ angular.module('dreamCastApp')
     $scope.formInput = !$scope.formInput;
   };
 
-  $scope.deleteProd = function(prod) {
-
+  $scope.delete = function() {
+    var prod = $scope.removedId;
+    prodService.deleteProd(prod);
+    $scope.prods = prodService.getProds();
   };
 
 });

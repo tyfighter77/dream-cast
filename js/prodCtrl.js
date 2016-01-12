@@ -17,8 +17,11 @@ angular.module('dreamCastApp')
     $scope.formInput = !$scope.formInput;
   };
 
-  $scope.deleteActor = function(actor) {
-
+  $scope.delete = function() {
+    var actor = $scope.removedId;
+    console.log(actor);
+    prodService.deleteActor(currentProdId, actor);
+    $scope.actors = prodService.getActors(currentProdId);
   };
 
 });

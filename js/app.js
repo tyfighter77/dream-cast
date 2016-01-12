@@ -1,4 +1,4 @@
-angular.module('dreamCastApp', ['ui.router', 'firebase'])
+angular.module('dreamCastApp', ['ui.router', 'firebase', 'ngDragDrop'])
 .constant('fb', {
   url: 'https://dream-cast.firebaseio.com/'
 })
