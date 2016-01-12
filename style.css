@@ -108,12 +108,12 @@ body {
 .welcomeWrap {
   margin: 100px auto;
   line-height: 36px;
-  max-width: 500px;
+  max-width: 430px;
   height: 400px;
   background:  #241c32;
   border-radius: 100%;
   text-align: center;
-  padding: 120px 50px 50px;
+  padding: 70px 50px 50px;
   vertical-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
@@ -135,6 +135,34 @@ body {
 
 .welcomeText {
   font-size: 30px;
+}
+
+.startBox {
+  margin: 0 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  display: inline-block;
+  background:  #241c32;
+  color: white;
+  border-radius: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.startBox:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-shadow: 0 0 10px #241c32 , 0 0 20px white , 0 0 30px white , 0 0 40px #00f0ff , 0 0 70px #00f0ff , 0 0 80px #00f0ff , 0 0 100px #00f0ff ;
 }
 
 .prodContainer {
@@ -199,7 +227,7 @@ body {
   height: 100px;
   border-radius: 100%;
   text-align: center;
-  line-height: 120px;
+  line-height: 110px;
   cursor: pointer;
 
 }
@@ -219,4 +247,26 @@ body {
   border-radius: 100%;
   text-align: center;
   line-height: 125px;
+}
+
+i[title]{
+	position:relative;
+}
+i[title]:after{
+	content:attr(title);
+  font-family: 'Satisfy', cursive;
+  color: #00f0ff;
+  font-size: 0.6em;
+	background:none;
+	padding:5px;
+	position:absolute;
+	left:-9999px;
+	opacity:0;
+	bottom:100%;
+	white-space:nowrap;
+	-webkit-transition:0.25s linear opacity;
+}
+i[title]:hover:after{
+	left:-200px;
+	opacity:1;
 }
