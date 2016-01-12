@@ -1,7 +1,7 @@
 <h1 class="pageTitle">{{prod.name}}</h1>
 
 <div class="prodContainer" ng-if="!formInput">
-  <div class="prodBox" ng-repeat="actor in actors" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="actor.$id" jqyoui-draggable="{animate:true}">
+  <div class="prodBox" ng-repeat="actor in actors" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="actor.$id" jqyoui-draggable="{animate:true}" ng-style="{'background-image':'url('+actor.img+')'}" >
     <p> <span class="castText">{{actor.role}}</span><br/>{{actor.name}}</p>
   </div>
   <div class="prodBox" ng-click="toggleInput()">(New Role)</div>
@@ -10,10 +10,12 @@
 <form class="inputForm" ng-if="formInput" ng-submit="createNewActor(newActor)">
   <input class="inputBox" type="text" placeholder="Role" ng-model="newActor.role">
   <input class="inputBox" type="text" placeholder="Actor Name" ng-model="newActor.name">
+  <input class="inputBox" type="text" placeholder="Image URL (optional)" ng-model="newActor.img">
   <div class="buttonWrap">
     <button class="inputButton" ui-sref="productions({uid:uid})">CANCEL</button>
     <button class="inputButton" type="submit">SAVE</button>
   </div>
 </form>
 
+<div class="arrowWrap" ui-sref="productions({uid:uid})"><i class="fa fa-arrow-left fa-3x"></i></div>
 <trash-dir></trash-dir>
