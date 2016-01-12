@@ -13,7 +13,9 @@ angular.module('dreamCastApp')
       var prods = [];
       for (var prod in snapshot.val()) {
         if (snapshot.val()[prod].uid === uid) {
-          prods.push(snapshot.val()[prod]);
+          var newProd = snapshot.val()[prod];
+          newProd.$id = prod;
+          prods.push(newProd);
         }
       }
       deferred.resolve(prods);
@@ -29,6 +31,7 @@ angular.module('dreamCastApp')
 
   this.addActor = function(newActor, prodId) {
     var ref = new Firebase(fb.url + 'prods/' + prodId + '/actors');
+    console.log(prodId);
     return $firebaseArray(ref).$add(newActor);
   };
 

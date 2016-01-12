@@ -24,6 +24,7 @@ angular.module('dreamCastApp')
     prodService.getProds($scope.uid)
     .then(function(response){
       $scope.prods = response;
+      console.log(response);
     });
   };
 

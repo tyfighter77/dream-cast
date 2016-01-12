@@ -2,7 +2,7 @@
   <h1 ui-sref="home" class="wordmark"><span>✨</span>Dream Cast</h1>
   <ul class="navButtons">
     <li ui-sref="home">HOME</li>
-    <li ui-sref="productions" ng-if="loggedIn">PRODUCTIONS</li>
+    <li ui-sref="productions({uid:uid})" ng-if="loggedIn">PRODUCTIONS</li>
     <li ui-sref="login" ng-if="!loggedIn">LOGIN</li>
     <li ui-sref="register" ng-if="!loggedIn">REGISTER</li>
     <li ng-click="logout()" ng-if="loggedIn">LOGOUT</li>

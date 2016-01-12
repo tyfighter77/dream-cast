@@ -3,7 +3,7 @@ angular.module('dreamCastApp')
   return {
     restrict: 'E',
     templateUrl: './views/navbarTmpl.html',
-    controller: function($scope, userService, fb, $firebaseAuth){
+    controller: function($scope, userService, fb, $firebaseAuth, $stateParams){
       var authRef = $firebaseAuth(new Firebase (fb.url));
       $scope.loggedIn = false;
 
@@ -16,6 +16,7 @@ angular.module('dreamCastApp')
           $scope.loggedIn = false;
         } else {
           $scope.loggedIn = true;
+          $scope.uid = authData.uid;
         }
       });
     }
