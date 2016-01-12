@@ -6,6 +6,7 @@ angular.module('dreamCastApp')
   var self = this;
 
   this.getUser = function() {
+    console.log(authRef.$getAuth());
     return authRef.$getAuth();
   };
 
@@ -29,7 +30,8 @@ angular.module('dreamCastApp')
       password: password
     })
     .then(function(authData){
-      $state.go('productions');
+      console.log(authData);
+      $state.go('productions', {uid:authData.uid});
     }, function(error){
       alert('Login Failed! Try Again');
       console.log(error);

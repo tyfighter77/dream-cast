@@ -1,7 +1,7 @@
 <h1 class="pageTitle">My Productions</h1>
 
 <div class="prodContainer" ng-if="!formInput">
-  <div class="prodBox" ui-sref="production({prodId:prod.$id})" ng-repeat="prod in prods" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="prod.$id" jqyoui-draggable="{animate:true}">
+  <div class="prodBox" ui-sref="production({uid:uid, prodId:prod.$id})" ng-repeat="prod in prods" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="prod.$id" jqyoui-draggable="{animate:true}">
     <p>{{prod.name}}</p>
   </div>
   <div class="prodBox" ng-click="toggleInput()">(New)</div>

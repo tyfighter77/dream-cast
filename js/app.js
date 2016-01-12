@@ -20,12 +20,12 @@ angular.module('dreamCastApp', ['ui.router', 'firebase', 'ngDragDrop'])
       controller: 'regCtrl'
     })
     .state('productions', {
-      url: '/productions',
+      url: '/productions/:uid',
       templateUrl: './views/prodsTmpl.html',
       controller: 'prodsCtrl'
     })
     .state('production', {
-      url: '/productions/:prodId',
+      url: '/productions/:uid/:prodId',
       templateUrl: './views/prodTmpl.html',
       controller: 'prodCtrl'
     });

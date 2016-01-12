@@ -1,11 +1,12 @@
 angular.module('dreamCastApp')
-.controller('prodsCtrl', function($scope, prodService){
+.controller('prodsCtrl', function($scope, prodService, $stateParams){
 
-  $scope.prods = prodService.getProds();
+  $scope.uid = $stateParams.uid;
 
   $scope.createNewProd = function(newProd) {
+    newProd.uid = $scope.uid;
     prodService.addProd(newProd);
-    $scope.prods = prodService.getProds();
+    $scope.getProds();
     $scope.toggleInput();
   };
 
@@ -16,7 +17,16 @@ angular.module('dreamCastApp')
   $scope.delete = function() {
     var prod = $scope.removedId;
     prodService.deleteProd(prod);
-    $scope.prods = prodService.getProds();
+    $scope.getProds();
   };
+
+  $scope.getProds = function() {
+    prodService.getProds($scope.uid)
+    .then(function(response){
+      $scope.prods = response;
+    });
+  };
+
+  $scope.getProds();
 
 });

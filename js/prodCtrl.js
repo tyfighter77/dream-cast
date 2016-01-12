@@ -1,7 +1,9 @@
 angular.module('dreamCastApp')
-.controller('prodCtrl', function($scope, $stateParams, prodService){
+.controller('prodCtrl', function($scope, $stateParams, prodService, userService){
 
   var currentProdId = $stateParams.prodId;
+
+  $scope.uid = $stateParams.uid;
 
   $scope.prod = prodService.getProd(currentProdId);
 
