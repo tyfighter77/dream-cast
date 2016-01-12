@@ -1,0 +1,19 @@
+<h1 class="pageTitle">{{prod.name}}</h1>
+
+<div class="prodContainer" ng-if="!formInput">
+  <div class="prodBox" ng-repeat="actor in actors">
+    <p> <span class="castText">{{actor.role}}</span><br/>{{actor.name}}</p>
+  </div>
+  <div class="prodBox" ng-click="toggleInput()">(New Role)</div>
+</div>
+
+<form class="inputForm" ng-if="formInput" ng-submit="createNewActor(newActor)">
+  <input class="inputBox" type="text" placeholder="Role" ng-model="newActor.role">
+  <input class="inputBox" type="text" placeholder="Actor Name" ng-model="newActor.name">
+  <div class="buttonWrap">
+    <button class="inputButton" ui-sref="productions">Cancel</button>
+    <button class="inputButton" type="submit">Save</button>
+  </div>
+</form>
+
+<trash-dir></trash-dir>

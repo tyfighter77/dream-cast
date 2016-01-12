@@ -11,6 +11,10 @@ angular.module('dreamCastApp')
 
   $scope.toggleInput = function(){
     $scope.formInput = !$scope.formInput;
-};
+  };
+
+  $scope.deleteProd = function(prod) {
+
+  };
 
 });

@@ -22,6 +22,14 @@ body {
   font-size: 44px;
 }
 
+.pageTitle {
+  font-family: 'Satisfy', cursive;
+  color: #a1f694;
+  font-size: 36px;
+  text-align: center;
+  margin: 40px auto -40px;
+}
+
 .navbar {
   background: #241c32;
   margin: 0 0 3em 0;
@@ -68,9 +76,15 @@ body {
   border-radius: 10px;
 }
 
-.inputButton {
+.buttonWrap {
   display: block;
   margin: 0 auto;
+  width: 245px;
+}
+
+.inputButton {
+  display: inline-block;
+  margin: 0 10px;
   width: 100px;
   height: 100px;
   text-align: center;
@@ -124,14 +138,14 @@ body {
 
 .prodContainer {
     margin: 100px auto;
-    max-width: 80%;
+    max-width: 60%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
 .prodBox {
-  margin: 0 auto;
+  margin: 0 10px 20px;
   font-size: 1.2em;
   display: inline-block;
   background:  #241c32;
@@ -156,4 +170,30 @@ body {
   -webkit-box-shadow: none;
   box-shadow: none;
   text-shadow: 0 0 10px white , 0 0 20px white , 0 0 30px white , 0 0 40px #00f0ff , 0 0 70px #00f0ff , 0 0 80px #00f0ff , 0 0 100px #00f0ff ;
+}
+
+.inputForm {
+  margin: 100px;
+}
+
+.inputForm .inputBox {
+ margin: 50px auto;
+}
+
+.castText {
+  line-height: 35px;
+  color: #00f0ff;
+}
+
+.trashWrap {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  background: #241c32;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 125px;
 }

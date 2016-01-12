@@ -16,4 +16,14 @@ angular.module('dreamCastApp')
     return $firebaseObject(ref);
   };
 
+  this.addActor = function(newActor, prodId) {
+    var ref = new Firebase(fb.url + 'prods/' + prodId + '/actors');
+    return $firebaseArray(ref).$add(newActor);
+  };
+
+  this.getActors = function(prodId){
+    var ref = new Firebase(fb.url + 'prods/' + prodId + '/actors');
+    return $firebaseArray(ref);
+  };
+
 });

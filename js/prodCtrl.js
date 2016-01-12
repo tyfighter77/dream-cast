@@ -5,4 +5,20 @@ angular.module('dreamCastApp')
 
   $scope.prod = prodService.getProd(currentProdId);
 
+  $scope.createNewActor = function(actor) {
+    prodService.addActor(actor, currentProdId);
+    $scope.actors = prodService.getActors(currentProdId);
+    $scope.toggleInput();
+  };
+
+  $scope.actors = prodService.getActors(currentProdId);
+
+  $scope.toggleInput = function(){
+    $scope.formInput = !$scope.formInput;
+  };
+
+  $scope.deleteActor = function(actor) {
+
+  };
+
 });
